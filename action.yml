@@ -17,7 +17,7 @@ inputs:
   max_retries:
     description: "Amount of times to retry generating a Deriv App ID."
     required: false
-    default: 5
+    default: "5"
   vercel_preview_url:
     description: "The Vercel deployment URL to generate a Deriv App ID for."
     required: true
@@ -29,5 +29,5 @@ outputs:
   should_post_comment:
     description: "Signals the next step whether to post a comment or not."
 runs:
-  using: "node12"
+  using: "node16"
   main: "dist/index.js"
