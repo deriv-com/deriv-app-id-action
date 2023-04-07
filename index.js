@@ -210,7 +210,7 @@ class AppIdGenerator {
 }
 
 (async () => {
-    const max_retries = core.getInput('max_retries');
+    const max_retries = Number(core.getInput('max_retries'));
 
     for (let i = 1; i <= max_retries; i++) {
         try {
