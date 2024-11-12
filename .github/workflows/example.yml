@@ -11,12 +11,12 @@ jobs:
     steps:
       - name: Capture Vercel preview URL
         id: vercel_preview_url
-        uses: binary-com/vercel-preview-url-action@master
+        uses: binary-com/vercel-preview-url-action@master # TODO: Update this to reference deriv-com/vercel-preview-url-action once it's migrated
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate Deriv App ID for deployment Preview URL
         id: generate_app_id
-        uses: binary-com/deriv-app-id-action@master
+        uses: deriv-com/deriv-app-id-action@master
         with:
           DERIV_API_TOKEN: ${{ secrets.DERIV_API_TOKEN }}
           DERIV_APP_ID: ${{ secrets.DERIV_APP_ID }},
